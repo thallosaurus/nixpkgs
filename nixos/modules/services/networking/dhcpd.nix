@@ -21,6 +21,7 @@ let
           (machine: ''
             host ${machine.hostName} {
               hardware ethernet ${machine.ethernetAddress};
+              ddns-hostname ${machine.hostName};
               fixed-address${
                 optionalString (postfix == "6") postfix
               } ${machine.ipAddress};
